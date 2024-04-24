@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Weather-Wise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ff1493;
+            background-image: linear-gradient(319deg, #ff1493 0%, #0000ff 37%, #ff8c00 100%);
+
+
+        }
+
+        nav {
+            height: 60px;
+            position: fixed;
+        }
+
+        .about {
+            top: 100px;
+            color: rgb(0, 0, 0);
+            position: relative;
+        }
+
+        .features {
+
+            top: 100px;
+            position: relative;
+        }
+
+        .inner-features {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        .inner-features .card {
+            margin: 20px 70px;
+            position: relative;
+        }
+
+        .tech-used {
+
+            position: relative;
+            top: 100px;
+        }
+
+        .tech-used .icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .icons .card {
+            position: relative;
+            margin: 10px 50px;
+        }
+
+        .icons .card:hover {
+            box-shadow: 2px 2px 2px 4px black;
+            box-sizing: border-box;
+            opacity: 1;
+            transition-duration: 0.5 s;
+            transition-delay: 0.01s;
+        }
+
+        .card span {
+            opacity: 0.7;
+        }
+
+        .card span:hover {
+            opacity: 1;
+            font-size: 1.05rem;
+            font-weight: bolder;
+            transition-duration: 2s;
+            transition-delay: 2s;
+        }
+
+        footer {
+            bottom: -60px;
+            height: 52px;
+            background-color: rgba(0, 0, 0, 0.884);
+            position: relative;
+
+        }
+
+        .createdby {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .createdby a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .footerdiv {
+            color: white;
+            display: flex;
+            margin: 40px 20px;
+            position: relative;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <h1 style="font-weight: 1000;"><a class="navbar-brand" href="#" style="font-size: 30px;">Weather-Wise</a></h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container-md">
+            <div class="about">
+                <h3>About</h3>
+                <p>
+                    WeatherWise represents a culmination of our team's dedication to revolutionizing the way
+                    individuals interact with weather forecasts. In a world increasingly reliant on digital solutions,
+                    the
+                    importance of accurate and accessible weather information cannot be overstated. Recognizing the
+                    limitations of existing weather applications, we embarked on a journey to develop WeatherWise—a
+                    dynamic and intuitive platform designed to cater to the diverse needs of users.
+                    At its core, WeatherWise aims to bridge the gap between complexity and simplicity, offering users
+                    a seamless and intuitive interface to access real-time weather updates.
+                </p>
+            </div>
+            <div class="features">
+                <h3>Features of <span>Weather-Wise</span></h3>
+                <div class="inner-features">
+                    <div class="card border-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header bg-transparent border-success">Header</div>
+                        <div class="card-body text-success">
+                            <h5 class="card-title">Success card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-success">Footer</div>
+                    </div>
+                    <div class="card border-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header bg-transparent border-success">Header</div>
+                        <div class="card-body text-success">
+                            <h5 class="card-title">Success card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-success">Footer</div>
+                    </div>
+                    <div class="card border-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header bg-transparent border-success">Header</div>
+                        <div class="card-body text-success">
+                            <h5 class="card-title">Success card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-success">Footer</div>
+                    </div>
+                    <div class="card border-success mb-3" style="max-width: 18rem;">
+                        <div class="card-header bg-transparent border-success">Header</div>
+                        <div class="card-body text-success">
+                            <h5 class="card-title">Success card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-success">Footer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-used">
+                <h3>Tech stack used in <span>Weather-Wise</span></h3>
+                <div class="icons">
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/Bootstrap (1).svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">Bootstrap</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/CSS3 (1).svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">CSS</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/HTML5 (1).svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">HTML</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/JavaScript.svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">Javascript</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/React (1).svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">React</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/Material UI.svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">Material UI</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/Vite.js.svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">Vite.js</span>
+                    </div>
+                    <div class="card" style="width: 6rem;" style="text-align: center;">
+                        <img src="/Weather-Wise/elements/GitHub (1).svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">github</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/Git (1).svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">Git</span>
+                    </div>
+                    <div class="card" style="width:5rem;">
+                        <img src="/Weather-Wise/elements/Firebase.svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">FireBase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerdiv">
+            <div class="right">
+                <h2>Created by</h2>
+            </div>
+            <div class="createdby">
+                <h3><a href="">Hariom</a></h3>&nbsp;&nbsp;
+                <h3>&</h3>
+                &nbsp;&nbsp;
+                <h3><a href="">Navneet</a></h3>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

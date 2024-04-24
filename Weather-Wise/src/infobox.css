@@ -1,20 +1,26 @@
-.info-box {
+.info-box{
     text-align: center;
-    margin: 0 auto;
+    margin:0 auto;
     font-weight: bolder;
-    /* Add transition for smoother appearance */
-    transition: all 0.3s ease;
-    
 }
 
-.box {
+.box{
     display: flex;
+    position: fixed;
     justify-content: center;
-    margin: 0 auto;
+    margin:0 auto;
     position: relative;
     text-align: center;
     width: 50vw;
-    padding: 5px;
-    /* Add transition for smoother appearance */
-    transition: all 0.3s ease;
+    padding:5px;
+    height: 81vh;
 }
+.icons{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0px 20px;
+    
+}
+

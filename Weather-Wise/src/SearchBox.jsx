@@ -29,6 +29,7 @@ export default function SearchBox({ updateInfo }) {
                 latitudes: jsonResponse.coord.lat,
                 longitudes: jsonResponse.coord.lon,
             };
+            console.log(jsonResponse);
             console.log(WeatherResult);
             return WeatherResult;
         } catch (error) {
@@ -40,16 +41,28 @@ export default function SearchBox({ updateInfo }) {
         setCity(event.target.value);
     }
 
-    let handleSubmit = async (evnt) => {
+    // let handleSubmit = async (evnt) => {
 
+    //     try {
+    //         evnt.preventDefault();
+    //         console.log(`Search for city = ${city}`);
+    //         setCity("");
+    //         let newInfo = await getWeatherInfo();
+    //         updateInfo(newInfo);
+    //     }
+    //     catch(err){
+    //         setError(true);
+    //     }
+    // }
+    let handleSubmit = async (evnt) => {
         try {
             evnt.preventDefault();
             console.log(`Search for city = ${city}`);
             setCity("");
             let newInfo = await getWeatherInfo();
             updateInfo(newInfo);
-        }
-        catch(err){
+            setError(false); // Reset error state if weather information is successfully retrieved
+        } catch (err) {
             setError(true);
         }
     }
@@ -59,12 +72,13 @@ export default function SearchBox({ updateInfo }) {
 
         <div className="searchbox">
             {/* <h3>Search for Weather.</h3> */}
-            <form className='search__items' action="" onSubmit={handleSubmit}>
+            <form action="" onSubmit={handleSubmit}>
+                <p class="fs-3">Please enter a city </p>
                 <TextField id="city" variant="outlined" label="City Name" required onChange={handleChange} value={city} />
-                {/* <br /><br /> */}
-                <Button id='btn__item' variant='contained' type='submit' >Search</Button>
+                <br /><br />
+                <Button variant='contained' type='submit' >Search</Button>
                 <p>
-                    {error&& <p style={{color:"red"}}>No such place exists.</p> }
+                    {error && <p style={{ color: "red" }}>No such place exists.</p>}
                 </p>
             </form>
         </div>

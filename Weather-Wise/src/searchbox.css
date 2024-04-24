@@ -1,27 +1,4 @@
-.searchbox {
-
-    width: 40vw;
-    padding: 10px;
-   
-    /* Add transition for smoother appearance */
-    transition: all 0.3s ease;
+.searchbox{
+    text-align: center;
 }
 
-#city{
-    width: 20vw;
-    /* margin-left: 10px; */
-    /* border: 2px solid black; */
-    /* border-radius: 1rem; */
-}
-
-.search__items{
-    display: flex;
-    margin-left: 5.5rem;
-}
-
-#btn__item{
-    position: relative;
-    left: 1vw;
-    /* width: 3.3rem;
-    height: 3.3rem; */
-}
