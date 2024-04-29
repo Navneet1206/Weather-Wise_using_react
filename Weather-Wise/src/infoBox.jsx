@@ -11,43 +11,6 @@ import "./infobox.css";
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />;
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-// export default function InfoBox({ info }) {
-
-//     // Define icon elements
-//     const winterIcon = <span class="material-icons-outlined">ac_unit</span>;
-//     const summerIcon = <span class="material-icons-outlined">wb_sunny</span>;
-//     const monsoonIcon = <span class="material-icons-outlined">cloud_queue</span>;
-
-//     return (
-//         <div className="info-box">
-//             <div className="box">
-//                 <Card sx={{ maxWidth: 345 }} id="box">
-//                     <CardMedia
-//                         component="img"
-//                         alt="Clear Sky"
-//                         height="140"
-//                         image={info.humidity > 80 ? monsoon : info.temp > 25 ? summer : winter}
-//                     />
-//                     <CardContent>
-//                         <div className='icons'>
-//                             <span>{info.city}</span>&nbsp;&nbsp;
-//                             <span>
-//                                 {info.humidity > 80 ? monsoonIcon : info.temp > 25 ? summerIcon : winterIcon}
-//                             </span>
-//                         </div>
-//                         <Typography variant="body2" color="text.secondary" component={"span"}>
-//                             <p>Temperature : {info.temp}&deg;C</p>
-//                             <p>Humidity : {info.humidity}&deg;C</p>
-//                             <p>Temperature Min : {info.tempMin}&deg;C</p>
-//                             <p>Temperature Max : {info.tempMax}&deg;C</p>
-//                             <p>Temperature can be described as <i>{info.weather}</i> and feels like <i>{info.tempFeels}</i></p>
-//                         </Typography>
-//                     </CardContent>
-//                 </Card>
-//             </div>
-//         </div>
-//     );
-
 export default function InfoBox({ info }) {
 
     // const imgUrl = "./elements/summer.webp";

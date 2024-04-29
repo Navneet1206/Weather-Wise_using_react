@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Weather-Wise</title>
+    <link rel="icon" type="image/svg+xml" href="/Weather-Wise/elements/WeahterLogo.jpg" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         * {
             margin: 0;
@@ -14,13 +17,23 @@
         body {
             background-color: #ff1493;
             background-image: linear-gradient(319deg, #ff1493 0%, #0000ff 37%, #ff8c00 100%);
-
-
         }
 
-        nav {
-            height: 60px;
+        /* nav {
+          height:100px;
+          position: fixed;
+      } */
+        nav .container-fluid {
             position: fixed;
+            z-index: 100;
+            top: 0.7px;
+            background-color: white;
+        }
+
+        .container-fluid {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
         }
 
         .about {
@@ -125,7 +138,8 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <h1 style="font-weight: 1000;"><a class="navbar-brand" href="#" style="font-size: 30px;">Weather-Wise</a></h1>
+            <h1 style="font-weight: 1000;"><a class="navbar-brand" href="#" style="font-size: 30px;">Weather-Wise</a>
+            </h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -136,22 +150,32 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+
+                    <!-- <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search"> -->
+                    <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                    <div class="right-nav">
+                        <a href="https://github.com/hariom-hub/WeatherApp_React" target="_blank"><i
+                                class="fa-brands fa-square-github"
+                                style="color: black;font-size: 35px;position: relative;top: 10px;"></i></a>
+                        <div class="btn-group">
+                            <button class="btn btn-primary" id="redirect">Go to App<span
+                                    class="material-symbols-outlined">
+                                    open_in_new
+                                </span></button>
+                        </div>
+                    </div>
+
                 </form>
             </div>
         </div>
     </nav>
-    <main>
+    <main style="z-index: 10">
         <div class="container-md">
             <div class="about">
-                <h3>About</h3>
-                <p>
+                <h3 style="color: white;">About</h3>
+                <p style="line-height: 25px;">
                     WeatherWise represents a culmination of our team's dedication to revolutionizing the way
                     individuals interact with weather forecasts. In a world increasingly reliant on digital solutions,
                     the
@@ -163,60 +187,67 @@
                 </p>
             </div>
             <div class="features">
-                <h3>Features of <span>Weather-Wise</span></h3>
+                <h3 style="color: rgb(237, 237, 237);">Features of <span
+                        style="color: rgb(0, 0, 0);">Weather-Wise</span></h3>
                 <div class="inner-features">
                     <div class="card border-success mb-3" style="max-width: 18rem;">
-                        <div class="card-header bg-transparent border-success">Header</div>
-                        <div class="card-body text-success">
-                            <h5 class="card-title">Success card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+                        <!-- <div class="card-header bg-transparent border-black text-center">Accurate Data</div> -->
+                        <div class="card-body text-black">
+                            <h5 class="card-title">Interactive UI</h5>
+                            <p class="card-text">Weather-Wise provides user a simple and interactive user interface so
+                                that the user
+                                can easily access the weather information across the world.</p>
                         </div>
-                        <div class="card-footer bg-transparent border-success">Footer</div>
+                        <!-- <div class="card-footer bg-transparent border-success text-center">Footer</div> -->
                     </div>
                     <div class="card border-success mb-3" style="max-width: 18rem;">
-                        <div class="card-header bg-transparent border-success">Header</div>
-                        <div class="card-body text-success">
-                            <h5 class="card-title">Success card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+                        <!-- <div class="card-header bg-transparent border-black text-center" ></div> -->
+                        <div class="card-body text-black">
+                            <h5 class="card-title">Faster Data rendering</h5>
+                            <p class="card-text">Using React and Operweather API helps in faster data transfer about the
+                                weather
+                                information in terms of Temperature,Humidity,Weather Aspect,Min & Max temperature and
+                                wind speed etc.
+                            </p>
                         </div>
-                        <div class="card-footer bg-transparent border-success">Footer</div>
+                        <!-- <div class="card-footer bg-transparent border-black text-center" >Footer</div> -->
                     </div>
                     <div class="card border-success mb-3" style="max-width: 18rem;">
-                        <div class="card-header bg-transparent border-success">Header</div>
-                        <div class="card-body text-success">
-                            <h5 class="card-title">Success card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+                        <!-- <div class="card-header bg-transparent border-black text-center">Header</div> -->
+                        <div class="card-body text-black">
+                            <h5 class="card-title">Accurate Weather Data</h5>
+                            <p class="card-text">Weather-Wise provides accurate information of weather by accessing the
+                                latest
+                                information from the open weather API.</p>
                         </div>
-                        <div class="card-footer bg-transparent border-success">Footer</div>
+                        <!-- <div class="card-footer bg-transparent border-success text-center">Footer</div> -->
                     </div>
                     <div class="card border-success mb-3" style="max-width: 18rem;">
-                        <div class="card-header bg-transparent border-success">Header</div>
-                        <div class="card-body text-success">
-                            <h5 class="card-title">Success card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+                        <!-- <div class="card-header bg-transparent border-black text-center" >Header</div> -->
+                        <div class="card-body text-black">
+                            <h5 class="card-title">Global Reach</h5>
+                            <p class="card-text">Weather-Wise covers a large area of weather information from all over
+                                the world
+                                which helps user to get the latest info about weather according to his/her need.</p>
                         </div>
-                        <div class="card-footer bg-transparent border-success">Footer</div>
+                        <!-- <div class="card-footer bg-transparent border-success text-center" >Footer</div> -->
                     </div>
                 </div>
             </div>
             <div class="tech-used">
-                <h3>Tech stack used in <span>Weather-Wise</span></h3>
+                <h3 style="color: white;">Tech stack used in <span style="color: black;">Weather-Wise</span></h3>
                 <div class="icons">
                     <div class="card" style="width: 5rem;">
                         <img src="/Weather-Wise/elements/Bootstrap (1).svg" class="card-img-top" alt="...">
                         <span style="text-align: center;">Bootstrap</span>
                     </div>
                     <div class="card" style="width: 5rem;">
-                        <img src="/Weather-Wise/elements/CSS3 (1).svg" class="card-img-top" alt="...">
-                        <span style="text-align: center;">CSS</span>
-                    </div>
-                    <div class="card" style="width: 5rem;">
                         <img src="/Weather-Wise/elements/HTML5 (1).svg" class="card-img-top" alt="...">
                         <span style="text-align: center;">HTML</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/CSS3 (1).svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">CSS</span>
                     </div>
                     <div class="card" style="width: 5rem;">
                         <img src="/Weather-Wise/elements/JavaScript.svg" class="card-img-top" alt="...">
@@ -234,7 +265,7 @@
                         <img src="/Weather-Wise/elements/Vite.js.svg" class="card-img-top" alt="...">
                         <span style="text-align: center;">Vite.js</span>
                     </div>
-                    <div class="card" style="width: 6rem;" style="text-align: center;">
+                    <div class="card" style="width: 5rem;" style="text-align: center;">
                         <img src="/Weather-Wise/elements/GitHub (1).svg" class="card-img-top" alt="...">
                         <span style="text-align: center;">github</span>
                     </div>
@@ -257,13 +288,24 @@
                 <h2>Created by</h2>
             </div>
             <div class="createdby">
-                <h3><a href="">Hariom</a></h3>&nbsp;&nbsp;
+                <h3><a href="https://www.linkedin.com/in/hariom-singh-thakur-8b5089214/" target="_blank">Hariom</a></h3>
+                &nbsp;&nbsp;
                 <h3>&</h3>
                 &nbsp;&nbsp;
-                <h3><a href="">Navneet</a></h3>
+                <h3><a href="https://www.linkedin.com/in/navneet-vishwakarma-b678aa262/" target="_blank">Navneet</a>
+                </h3>
             </div>
         </div>
     </footer>
 </body>
 
 </html>
+<script>
+
+    let button = document.getElementById('redirect');
+
+    button.addEventListener('click', async () => {
+
+        await window.open("http://localhost:5173/", 'blank');
+    })
+</script>
